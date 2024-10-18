@@ -35,10 +35,28 @@ function reverseString(string) {
 // Utilizzo la funzione reverseString
 reverseString(userInput);
 
-// Stampo il risultato ottenuto come variabile
-let reversed_Userinput = reversedString;
-console.log(reversed_Userinput);
+// Stampo il risultato ottenuto come variabile per verificare che sia stato elaborato correttamente
+console.log('La stringa rigirata è: ' + reversedString);
 
+
+// Creo una funzione per verificare se la stringa dichiarata dall'utente sia palindroma
+/**
+ * La funzione verifica se una stringa è palindroma.
+ * @param {String} checkedString String è il parametro esterno di tipo stringa da elaborare
+ */
+function isPalindromo(checkedString) {
+    
+    let checkedString;
+    let reversedString = reverseString(checkedString);
+
+    let isPalindromo = (checkedString == reversedString) ? ('The string is Palindromo: ' + checkedString) : 'The string i NOT Palindromo';
+}
+
+
+// Utilizzo la funzione isPalindromo
+isPalindromo(checkedString);
+console.log(isPalindromo(checkedString)):
+    
 
 
 

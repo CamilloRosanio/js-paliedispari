@@ -138,9 +138,9 @@ while (isNaN(userNumber) || userNumber > 5 || userNumber <= 0) {
  * La funzione genera un numero random tra 1 e 5;
  */
 function diceOneFive () {
-    const myNumber = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+    const myResult = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
 
-    return myNumber;
+    return myResult;
 }
 
 // Genero un numero tramite la mia funzione da assegnare al Computer
@@ -159,19 +159,29 @@ console.log('La somma è uguale a: ' + laMiaSomma);
  * @param {Number} numberToTest
  */
 function pariODispari(numberToTest) {
+    let myResult;
+
     if (numberToTest % 2 === 0) {
-        let result = true;
+        myResult = 'pari';
     } else {
-        let result = false;
+        myResult = 'dispari';
     }
 
-    return result;
+    return myResult;
 }
 
-// Utilizzo la funzione pariODispari come condizione del SE
+// Utilizzo la funzione pariODispari
+const risultatoFinale = pariODispari(laMiaSomma);
+console.log('Il mio risultato è: ' + risultatoFinale);
 
 // SE la condizione è vera
-if (pariODispari(userNumber)) {
-
+if (userChoice == risultatoFinale) {
+    // Stampo il risultato in console
+    console.log('Hai vinto!');
+    alert('Hai vinto!')
+} else {
+    // Stampo il risultato in console
+    console.log('Hai perso');
+    alert('Hai perso')
 }
 

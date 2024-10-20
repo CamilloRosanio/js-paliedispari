@@ -10,7 +10,7 @@ Creare una funzione per capire se la parola inserita è palindroma */
 let userInput = prompt('Inserisci una parola palindroma');
 
 // Dichiaro la variabile del mio testo in reverse, per portarla fuori dalla funzione
-let reversedString;
+let parolaInvertita;
 
 // Creo una funzione per ribaltare la stringa scelta dall'utente
 /**
@@ -32,30 +32,31 @@ function reverseString(string) {
     
 }
 
-// Utilizzo la funzione reverseString
-reverseString(userInput);
+// Utilizzo la funzione reverseString assegnando il risutato alla variabile dichiarata in precedenza.
+parolaInvertita = reverseString(userInput);
 
 // Stampo il risultato ottenuto come variabile per verificare che sia stato elaborato correttamente
-console.log('La stringa rigirata è: ' + reversedString);
+console.log('La stringa rigirata è: ' + parolaInvertita);
 
 
 // Creo una funzione per verificare se la stringa dichiarata dall'utente sia palindroma
 /**
- * La funzione verifica se una stringa è palindroma.
+ * La funzione verifica se una stringa è palindroma, e necessita della funzione reverseString per elaborare i dati.
  * @param {String} checkedString String è il parametro esterno di tipo stringa da elaborare
  */
-function isPalindromo(checkedString) {
+function isPalindroma(checkedString) {
     
-    let checkedString;
     let reversedString = reverseString(checkedString);
 
-    let isPalindromo = (checkedString == reversedString) ? ('The string is Palindromo: ' + checkedString) : 'The string i NOT Palindromo';
+    let isPalindroma = (checkedString == reversedString) ? ('The string is Palindroma: ' + checkedString) : 'The string i NOT Palindroma';
+
+    return isPalindroma;
 }
 
 
-// Utilizzo la funzione isPalindromo
-isPalindromo(checkedString);
-console.log(isPalindromo(checkedString)):
+// Utilizzo la funzione isPalindroma e stampo il risultato.
+let verificaPalindromia = isPalindroma(userInput);
+console.log(verificaPalindromia);
     
 
 
